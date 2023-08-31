@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Frontend12_lyoma
         </a>
       </header>
     </div>
