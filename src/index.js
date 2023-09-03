@@ -1,17 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Testq from './components/Testq.jsx';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div>
+    <Test/>
+    <Text>Text</Text>
+
+    <Text2>Text2</Text2>
+
+    <Test2/>
+    <Testq />
+    
+    <App/>
+
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Test(){
+  return(
+    <p> Test </p>
+  )
+}
+
+function Text(props){
+  return(
+    <p>
+      {props.children}
+    </p>
+  )
+}
+
+function Text2({children}){
+  return(
+    <p>
+      {children}
+    </p>
+  )
+}
+
+function Test2(){
+  let cnt = 5
+  return(
+    <div>
+      <p>{cnt + 10}</p>
+      <button>
+          click
+      </button>
+    </div>
+  )
+}
